@@ -2,6 +2,11 @@ ThisBuild / version := "0.1.0-SNAPSHOT"
 
 ThisBuild / scalaVersion := "3.7.1"
 
+lazy val photoscala = (project in file("photoscala"))
+  .settings(
+    name := "photoscala"
+  )
+
 lazy val root = (project in file("."))
   .settings(
     name := "scala-projects"
