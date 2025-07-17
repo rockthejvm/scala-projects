@@ -75,7 +75,38 @@ object BasicScraping {
       .toList
   }
 
+  case class Article(title: String, url: String, tags: List[String])
+
+  // Rock the JVM
+  // 1 - fetch number of pages
+  def scrapeNPages(): Int =
+    Jsoup.connect("https://rockthejvm.com/articles/1").get()
+      .select("footer>nav>div.hidden")
+      .select("a")
+      .asScala
+      .filter(link => Option(link.attr("href")).nonEmpty)
+      .map(_.text().toInt)
+      .max
+
+  // 2 - fetch all articles from a page
+  def fetchSinglePage(page: Int): List[Article] =
+    Jsoup.connect(s"https://rockthejvm.com/articles/$page").get()
+      .select("article")
+      .asScala
+      .toList
+      .map { article =>
+        val title = article.select("h2").text()
+        val url = Option(article.select("h2 a").attr("href")).getOrElse("/")
+        val tags = article.select("div>a").asScala.map(link => Option(link.attr("href")).getOrElse("/")).toList
+        Article(title, url, tags)
+      }
+
+  def scrapeRockthejvmArticles() =
+    (1 to scrapeNPages()).toList.flatMap(fetchSinglePage)
+
   def main(args: Array[String]): Unit = {
-    parseLobstersDiscussion("/s/ugyxdj/new_date_wtf").foreach(println)
+    scrapeRockthejvmArticles().foreach { article =>
+      println(s"${article.title} [${article.tags.mkString(",")}] - ${article.url}")
+    }
   }
 }
