@@ -8,6 +8,7 @@ lazy val scrapeyard = (project in file("scrapeyard"))
     libraryDependencies ++= Seq(
       "org.jsoup" % "jsoup" % "1.21.1",
       "com.lihaoyi" %% "requests"  % "0.9.0",
+      "com.lihaoyi" %% "upickle"  % "4.2.1",
       "org.scala-lang.modules" %% "scala-parallel-collections" % "1.2.0",
       "org.quartz-scheduler"    % "quartz"                     % "2.5.0",
       "org.quartz-scheduler"    % "quartz-jobs"                % "2.5.0",
