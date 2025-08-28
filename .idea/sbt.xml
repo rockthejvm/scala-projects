@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/photoscala" />
             <option value="$PROJECT_DIR$/project" />
             <option value="$PROJECT_DIR$/scrapeyard" />
+            <option value="$PROJECT_DIR$/staticsite" />
           </set>
         </option>
         <option name="sbtVersion" value="1.11.2" />

@@ -24,6 +24,18 @@ lazy val photoscala = (project in file("photoscala"))
     name := "photoscala"
   )
 
+lazy val staticsite = (project in file("staticsite"))
+  .settings(
+    name := "staticsite",
+    libraryDependencies ++= Seq(
+      "com.lihaoyi" %% "os-lib"    % "0.11.4",
+      "com.lihaoyi" %% "scalatags" % "0.13.1",
+      "com.lihaoyi" %% "cask"      % "0.10.2",
+      // markdown
+      "org.commonmark" % "commonmark" % "0.24.0",
+    )
+  )
+
 lazy val root = (project in file("."))
   .settings(
     name := "scala-projects"
