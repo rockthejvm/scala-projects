@@ -6,13 +6,13 @@ import scalasql.dialects.PostgresDialect.*
 
 import java.sql.DriverManager
 
-case class Player(id: String, name: String, email: String, xp: Int, gameType: String)
-object Player extends SimpleTable[Player]
-
-case class Game(id: String, name: String, gameType: String)
-object Game extends SimpleTable[Game]
-
 object ScalaSqlDemo {
+  case class Player(id: String, name: String, email: String, xp: Int, gameType: String)
+  object Player extends SimpleTable[Player]
+
+  case class Game(id: String, name: String, gameType: String)
+  object Game extends SimpleTable[Game]
+
   def main(args: Array[String]): Unit = {
     // database
     val dbClient = new DbClient.Connection(
@@ -67,7 +67,7 @@ object ScalaSqlDemo {
     val join = Player.select
       .join(Game)(_.gameType === _.gameType) // "on player.game_type = game.game_type"
       // ^^ query of (Player, Game)
-      .filter { 
+      .filter {
         case (player, game) => player.xp > 2000
       }
     println(db.renderSql(join))
