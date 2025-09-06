@@ -28,3 +28,10 @@ INSERT INTO game (id, name, game_type) VALUES
 ('g11', 'Age of Empires IV', 'Strategy'),
 ('g12', 'Heroes of the Storm', 'MOBA');
 
+create table messages(
+    id text primary key,
+    sender text,
+    content text,
+    parent_id text,
+    timestamp bigint
+);

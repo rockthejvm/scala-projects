@@ -9,7 +9,9 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/chat-app-backend" />
+            <option value="$PROJECT_DIR$/chat-app/js" />
+            <option value="$PROJECT_DIR$/chat-app/jvm" />
+            <option value="$PROJECT_DIR$/chat-app/shared" />
             <option value="$PROJECT_DIR$/photoscala" />
             <option value="$PROJECT_DIR$/project" />
             <option value="$PROJECT_DIR$/scrapeyard" />

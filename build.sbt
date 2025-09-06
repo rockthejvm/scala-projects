@@ -36,19 +36,36 @@ lazy val staticsite = (project in file("staticsite"))
     )
   )
 
-lazy val chatAppBackend = (project in file("chat-app-backend"))
-  .settings(
-    name := "chat-app-backend",
-    libraryDependencies ++= Seq(
-      "com.lihaoyi" %% "os-lib"    % "0.11.5",
-      "com.lihaoyi" %% "scalatags" % "0.13.1",
-      "com.lihaoyi" %% "cask"      % "0.10.2",
-      "com.lihaoyi" %% "upickle"   % "4.2.1",
-      "com.lihaoyi" %% "scalasql" % "0.1.20",
-      "com.lihaoyi" %% "scalasql-namedtuples" % "0.1.20",
-      "org.postgresql" % "postgresql" % "42.7.7",
+lazy val chatApp =
+  crossProject(JSPlatform, JVMPlatform)
+    .in(file("chat-app"))
+    .settings(
+      name := "chat-app",
     )
-  )
+    .jsSettings(
+      name := "frontend",
+      Compile / fastOptJS / artifactPath := baseDirectory.value / "static/main.js",
+      scalaJSUseMainModuleInitializer    := true,
+      libraryDependencies ++= Seq(
+        "org.scala-js"  %%% "scalajs-dom" % "2.8.0",
+        "com.lihaoyi" %%% "scalatags"   % "0.13.1",
+        "com.lihaoyi" %%% "upickle"   % "4.3.0",
+      )
+    )
+    .jvmSettings(
+      name := "backend",
+      fork := true,
+      libraryDependencies ++= Seq(
+        "com.lihaoyi" %% "os-lib"    % "0.11.5",
+        "com.lihaoyi" %% "scalatags" % "0.13.1",
+        "com.lihaoyi" %% "cask"      % "0.10.2",
+        "com.lihaoyi" %% "upickle"   % "4.3.0",
+        "com.lihaoyi" %% "scalasql" % "0.1.20",
+        "com.lihaoyi" %% "scalasql-namedtuples" % "0.1.20",
+        "org.postgresql" % "postgresql" % "42.7.7",
+      )
+    )
+
 
 lazy val root = (project in file("."))
   .settings(
