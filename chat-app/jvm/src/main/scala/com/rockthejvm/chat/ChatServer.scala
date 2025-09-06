@@ -94,11 +94,14 @@ object ChatServer extends MainRoutes {
           )))
         } else {
           // set the id of the message in case the id is empty
-          if (msg.id.isEmpty)
-            db.saveMessage(msg.copy(id = UUID.randomUUID().toString))
-          else 
-            db.saveMessage(msg)
-          wsConnections.forEach(_.send(event))
+          val completeMsg = 
+            if (msg.id.isEmpty)
+              msg.copy(id = UUID.randomUUID().toString)
+            else
+              msg
+              
+          db.saveMessage(completeMsg)
+          wsConnections.forEach(_.send(Ws.Text(write(completeMsg))))
         }
       case Ws.Close(_, _) =>
         wsConnections.remove(channel)

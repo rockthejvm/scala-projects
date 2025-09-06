@@ -83,9 +83,15 @@ object ChatApp extends App {
             )
           }, 
         // sender
-        div(b(message.sender)),
+        div(b(
+          cls := "message-sender",
+          message.sender
+        )),
         // content
-        div(message.content),
+        div(
+          cls := "message-content",
+          message.content
+        ),
         // meta = timestamp + reply link
         div(
           cls := "meta",
@@ -97,8 +103,8 @@ object ChatApp extends App {
               val messageEl = target.closest(".message").asInstanceOf[html.Div]
               replyTo = Option(messageEl.getAttribute("data-id"))
 
-              val sender = messageEl.querySelector("b").textContent
-              val content = messageEl.querySelector("div:nth-of-type(2)").textContent
+              val sender = messageEl.querySelector("b.message-sender").textContent
+              val content = messageEl.querySelector("div.message-content").textContent
               val previewText = s"$sender: $content"
               dom.console.log(s"attempting to reply to '$previewText'")
 

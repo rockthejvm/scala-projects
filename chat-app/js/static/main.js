@@ -15211,56 +15211,58 @@ $c_Lcom_rockthejvm_chat_ChatApp$.prototype.renderUserMessage__Lcom_rockthejvm_ch
   } else {
     var baseCssClasses = new $c_sci_$colon$colon("message", new $c_sci_$colon$colon("other", $m_sci_Nil$()));
   }
-  var $x_31 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().div__Lscalatags_generic_TypedTag());
-  var $x_30 = $m_sr_ScalaRunTime$();
-  var $x_29 = $n($m_Lscalatags_JsDom$all$().cls__Lscalatags_generic_Attr()).$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair($f_sc_IterableOnceOps__mkString__T__T__T__T(baseCssClasses, "", " ", ""), $m_Lscalatags_JsDom$all$().Lscalatags_JsDom$all$__f_stringAttr);
+  var $x_33 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().div__Lscalatags_generic_TypedTag());
+  var $x_32 = $m_sr_ScalaRunTime$();
+  var $x_31 = $n($m_Lscalatags_JsDom$all$().cls__Lscalatags_generic_Attr()).$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair($f_sc_IterableOnceOps__mkString__T__T__T__T(baseCssClasses, "", " ", ""), $m_Lscalatags_JsDom$all$().Lscalatags_JsDom$all$__f_stringAttr);
   var this$5 = $m_Lscalatags_JsDom$all$();
   $m_Lscalatags_JsDom$all$();
   var ns = null;
   $m_Lscalatags_JsDom$all$();
   var raw = false;
-  var $x_28 = $n($f_Lscalatags_generic_Util__attr__T__Lscalatags_generic_Namespace__Z__Lscalatags_generic_Attr(this$5, "data-id", ns, raw)).$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair($n(message).Lcom_rockthejvm_chat_domain_Message__f_id, $m_Lscalatags_JsDom$all$().Lscalatags_JsDom$all$__f_stringAttr);
+  var $x_30 = $n($f_Lscalatags_generic_Util__attr__T__Lscalatags_generic_Namespace__Z__Lscalatags_generic_Attr(this$5, "data-id", ns, raw)).$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair($n(message).Lcom_rockthejvm_chat_domain_Message__f_id, $m_Lscalatags_JsDom$all$().Lscalatags_JsDom$all$__f_stringAttr);
   var this$12 = $m_Lscalatags_JsDom$all$();
   var this$6 = $n($n(message).Lcom_rockthejvm_chat_domain_Message__f_parentId);
   if (this$6.isEmpty__Z()) {
-    var $x_20 = $m_s_None$();
+    var $x_22 = $m_s_None$();
   } else {
     var x0 = this$6.get__O();
     var pid = $as_T(x0);
-    var $x_20 = $m_s_Option$().apply__O__s_Option($m_Lcom_rockthejvm_chat_ChatApp$().Lcom_rockthejvm_chat_ChatApp$__f_chatContainer.querySelector((("div.message[data-id='" + pid) + "']")));
+    var $x_22 = $m_s_Option$().apply__O__s_Option($m_Lcom_rockthejvm_chat_ChatApp$().Lcom_rockthejvm_chat_ChatApp$__f_chatContainer.querySelector((("div.message[data-id='" + pid) + "']")));
   }
-  var this$7 = $n($x_20);
+  var this$7 = $n($x_22);
   if (this$7.isEmpty__Z()) {
     var xs = $m_s_None$();
   } else {
     var x0$1 = this$7.get__O();
     var parentSender = $as_T(x0$1.querySelector("b").textContent);
     var parentContent = $as_T(x0$1.querySelector("div:nth-of-type(2)").textContent);
-    var $x_26 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().div__Lscalatags_generic_TypedTag());
-    var $x_25 = $m_sr_ScalaRunTime$();
-    var $x_24 = $n($m_Lscalatags_JsDom$all$().cls__Lscalatags_generic_Attr()).$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("reply-preview", $m_Lscalatags_JsDom$all$().Lscalatags_JsDom$all$__f_stringAttr);
-    var $x_23 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().small__Lscalatags_generic_TypedTag());
-    var $x_22 = $m_sr_ScalaRunTime$();
-    var $x_21 = $n($as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().b__Lscalatags_generic_TypedTag())).apply__sci_Seq__Lscalatags_JsDom$TypedTag($m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_Lscalatags_generic_Modifier.getArrayOf().constr)([($m_Lscalatags_JsDom$all$(), new $c_Lscalatags_JsDom$StringFrag(parentSender))])));
+    var $x_28 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().div__Lscalatags_generic_TypedTag());
+    var $x_27 = $m_sr_ScalaRunTime$();
+    var $x_26 = $n($m_Lscalatags_JsDom$all$().cls__Lscalatags_generic_Attr()).$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("reply-preview", $m_Lscalatags_JsDom$all$().Lscalatags_JsDom$all$__f_stringAttr);
+    var $x_25 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().small__Lscalatags_generic_TypedTag());
+    var $x_24 = $m_sr_ScalaRunTime$();
+    var $x_23 = $n($as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().b__Lscalatags_generic_TypedTag())).apply__sci_Seq__Lscalatags_JsDom$TypedTag($m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_Lscalatags_generic_Modifier.getArrayOf().constr)([($m_Lscalatags_JsDom$all$(), new $c_Lscalatags_JsDom$StringFrag(parentSender))])));
     $m_Lscalatags_JsDom$all$();
     var v = (": " + parentContent);
-    var xs = new $c_s_Some($n($x_26).apply__sci_Seq__Lscalatags_JsDom$TypedTag($x_25.wrapRefArray__AO__sci_ArraySeq(new ($d_Lscalatags_generic_Modifier.getArrayOf().constr)([$x_24, $n($x_23).apply__sci_Seq__Lscalatags_JsDom$TypedTag($x_22.wrapRefArray__AO__sci_ArraySeq(new ($d_Lscalatags_generic_Modifier.getArrayOf().constr)([$x_21, new $c_Lscalatags_JsDom$StringFrag(v)])))]))));
+    var xs = new $c_s_Some($n($x_28).apply__sci_Seq__Lscalatags_JsDom$TypedTag($x_27.wrapRefArray__AO__sci_ArraySeq(new ($d_Lscalatags_generic_Modifier.getArrayOf().constr)([$x_26, $n($x_25).apply__sci_Seq__Lscalatags_JsDom$TypedTag($x_24.wrapRefArray__AO__sci_ArraySeq(new ($d_Lscalatags_generic_Modifier.getArrayOf().constr)([$x_23, new $c_Lscalatags_JsDom$StringFrag(v)])))]))));
   }
   var this$11 = $m_s_$less$colon$less$();
   var ev = this$11.s_$less$colon$less$__f_singleton;
-  var $x_27 = $f_Lscalatags_generic_Util__OptionNode__s_Option__F1__Lscalatags_generic_Util$SeqNode(this$12, xs, ev);
-  var $x_19 = $n($as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().div__Lscalatags_generic_TypedTag()));
+  var $x_29 = $f_Lscalatags_generic_Util__OptionNode__s_Option__F1__Lscalatags_generic_Util$SeqNode(this$12, xs, ev);
+  var $x_21 = $n($as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().div__Lscalatags_generic_TypedTag()));
+  var $x_20 = $m_sr_ScalaRunTime$();
+  var $x_19 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().b__Lscalatags_generic_TypedTag());
   var $x_18 = $m_sr_ScalaRunTime$();
-  var $x_17 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().b__Lscalatags_generic_TypedTag());
-  var $x_16 = $m_sr_ScalaRunTime$();
+  var $x_17 = $n($m_Lscalatags_JsDom$all$().cls__Lscalatags_generic_Attr()).$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("message-sender", $m_Lscalatags_JsDom$all$().Lscalatags_JsDom$all$__f_stringAttr);
   $m_Lscalatags_JsDom$all$();
   var v$1 = $n(message).Lcom_rockthejvm_chat_domain_Message__f_sender;
-  var $x_15 = $x_19.apply__sci_Seq__Lscalatags_JsDom$TypedTag($x_18.wrapRefArray__AO__sci_ArraySeq(new ($d_Lscalatags_generic_Modifier.getArrayOf().constr)([$n($x_17).apply__sci_Seq__Lscalatags_JsDom$TypedTag($x_16.wrapRefArray__AO__sci_ArraySeq(new ($d_Lscalatags_generic_Modifier.getArrayOf().constr)([new $c_Lscalatags_JsDom$StringFrag(v$1)])))])));
-  var $x_14 = $n($as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().div__Lscalatags_generic_TypedTag()));
-  var $x_13 = $m_sr_ScalaRunTime$();
+  var $x_16 = $x_21.apply__sci_Seq__Lscalatags_JsDom$TypedTag($x_20.wrapRefArray__AO__sci_ArraySeq(new ($d_Lscalatags_generic_Modifier.getArrayOf().constr)([$n($x_19).apply__sci_Seq__Lscalatags_JsDom$TypedTag($x_18.wrapRefArray__AO__sci_ArraySeq(new ($d_Lscalatags_generic_Modifier.getArrayOf().constr)([$x_17, new $c_Lscalatags_JsDom$StringFrag(v$1)])))])));
+  var $x_15 = $n($as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().div__Lscalatags_generic_TypedTag()));
+  var $x_14 = $m_sr_ScalaRunTime$();
+  var $x_13 = $n($m_Lscalatags_JsDom$all$().cls__Lscalatags_generic_Attr()).$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("message-content", $m_Lscalatags_JsDom$all$().Lscalatags_JsDom$all$__f_stringAttr);
   $m_Lscalatags_JsDom$all$();
   var v$2 = $n(message).Lcom_rockthejvm_chat_domain_Message__f_content;
-  var $x_12 = $x_14.apply__sci_Seq__Lscalatags_JsDom$TypedTag($x_13.wrapRefArray__AO__sci_ArraySeq(new ($d_Lscalatags_generic_Modifier.getArrayOf().constr)([new $c_Lscalatags_JsDom$StringFrag(v$2)])));
+  var $x_12 = $x_15.apply__sci_Seq__Lscalatags_JsDom$TypedTag($x_14.wrapRefArray__AO__sci_ArraySeq(new ($d_Lscalatags_generic_Modifier.getArrayOf().constr)([$x_13, new $c_Lscalatags_JsDom$StringFrag(v$2)])));
   var $x_11 = $as_Lscalatags_JsDom$TypedTag($m_Lscalatags_JsDom$all$().div__Lscalatags_generic_TypedTag());
   var $x_10 = $m_sr_ScalaRunTime$();
   var $x_9 = $n($m_Lscalatags_JsDom$all$().cls__Lscalatags_generic_Attr()).$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("meta", $m_Lscalatags_JsDom$all$().Lscalatags_JsDom$all$__f_stringAttr);
@@ -15275,8 +15277,8 @@ $c_Lcom_rockthejvm_chat_ChatApp$.prototype.renderUserMessage__Lcom_rockthejvm_ch
     var target = e.target;
     var messageEl = target.closest(".message");
     $m_Lcom_rockthejvm_chat_ChatApp$().Lcom_rockthejvm_chat_ChatApp$__f_replyTo = $m_s_Option$().apply__O__s_Option($as_T(messageEl.getAttribute("data-id")));
-    var sender = $as_T(messageEl.querySelector("b").textContent);
-    var content = $as_T(messageEl.querySelector("div:nth-of-type(2)").textContent);
+    var sender = $as_T(messageEl.querySelector("b.message-sender").textContent);
+    var content = $as_T(messageEl.querySelector("div.message-content").textContent);
     var previewText = ((sender + ": ") + content);
     console.log((("attempting to reply to '" + previewText) + "'"));
     var preview = document.querySelector(".input-reply-preview");
@@ -15291,16 +15293,16 @@ $c_Lcom_rockthejvm_chat_ChatApp$.prototype.renderUserMessage__Lcom_rockthejvm_ch
     var f$1 = $as_F1(f);
     return $m_sjs_js_Any$().fromFunction1__F1__sjs_js_Function1(f$1);
   }));
-  var messageDiv = $n($n($x_31).apply__sci_Seq__Lscalatags_JsDom$TypedTag($x_30.wrapRefArray__AO__sci_ArraySeq(new ($d_Lscalatags_generic_Modifier.getArrayOf().constr)([$x_29, $x_28, $x_27, $x_15, $x_12, $n($x_11).apply__sci_Seq__Lscalatags_JsDom$TypedTag($x_10.wrapRefArray__AO__sci_ArraySeq(new ($d_Lscalatags_generic_Modifier.getArrayOf().constr)([$x_9, $x_8, $n($x_7).apply__sci_Seq__Lscalatags_JsDom$TypedTag($x_6.wrapRefArray__AO__sci_ArraySeq(new ($d_Lscalatags_generic_Modifier.getArrayOf().constr)([$x_5, $n($x_4).$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair($x_3, new $c_Lscalatags_LowPriorityImplicits$$anon$2(ev$1)), ($m_Lscalatags_JsDom$all$(), new $c_Lscalatags_JsDom$StringFrag("Reply"))])))])))])))).render__Lorg_scalajs_dom_Element();
-  var $x_32 = $n(message).Lcom_rockthejvm_chat_domain_Message__f_sender;
+  var messageDiv = $n($n($x_33).apply__sci_Seq__Lscalatags_JsDom$TypedTag($x_32.wrapRefArray__AO__sci_ArraySeq(new ($d_Lscalatags_generic_Modifier.getArrayOf().constr)([$x_31, $x_30, $x_29, $x_16, $x_12, $n($x_11).apply__sci_Seq__Lscalatags_JsDom$TypedTag($x_10.wrapRefArray__AO__sci_ArraySeq(new ($d_Lscalatags_generic_Modifier.getArrayOf().constr)([$x_9, $x_8, $n($x_7).apply__sci_Seq__Lscalatags_JsDom$TypedTag($x_6.wrapRefArray__AO__sci_ArraySeq(new ($d_Lscalatags_generic_Modifier.getArrayOf().constr)([$x_5, $n($x_4).$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair($x_3, new $c_Lscalatags_LowPriorityImplicits$$anon$2(ev$1)), ($m_Lscalatags_JsDom$all$(), new $c_Lscalatags_JsDom$StringFrag("Reply"))])))])))])))).render__Lorg_scalajs_dom_Element();
+  var $x_34 = $n(message).Lcom_rockthejvm_chat_domain_Message__f_sender;
   var this$18 = $n(this.Lcom_rockthejvm_chat_ChatApp$__f_username);
-  if (($x_32 !== (this$18.isEmpty__Z() ? "" : this$18.get__O()))) {
+  if (($x_34 !== (this$18.isEmpty__Z() ? "" : this$18.get__O()))) {
     messageDiv.style.background = $p_Lcom_rockthejvm_chat_ChatApp$__assignColor__T__T(this, $n(message).Lcom_rockthejvm_chat_domain_Message__f_sender);
   }
   this.Lcom_rockthejvm_chat_ChatApp$__f_chatContainer.appendChild(messageDiv);
-  var $x_33 = this.Lcom_rockthejvm_chat_ChatApp$__f_chatContainer;
+  var $x_35 = this.Lcom_rockthejvm_chat_ChatApp$__f_chatContainer;
   var x = $uI(this.Lcom_rockthejvm_chat_ChatApp$__f_chatContainer.scrollHeight);
-  $x_33.scrollTop = x;
+  $x_35.scrollTop = x;
 });
 $c_Lcom_rockthejvm_chat_ChatApp$.prototype.renderMessage__Lcom_rockthejvm_chat_domain_Message__V = (function(message) {
   if (($n(message).Lcom_rockthejvm_chat_domain_Message__f_sender === "SYSTEM")) {
