@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ScalaCompilerConfiguration">
-    <profile name="sbt 1" modules="scala-projects,scala-projects.backend,scala-projects.backend~1,scala-projects.chat-app-backend,scala-projects.junk-chat.junkAppJVM,scala-projects.photoscala,scala-projects.scrapeyard,scala-projects.staticsite" />
+    <profile name="sbt 1" modules="scala-projects,scala-projects.backend,scala-projects.backend~1,scala-projects.chat-app-backend,scala-projects.filesync,scala-projects.junk-chat.junkAppJVM,scala-projects.photoscala,scala-projects.scrapeyard,scala-projects.staticsite" />
     <profile name="sbt 2" modules="scala-projects.frontend,scala-projects.frontend~1,scala-projects.junk-chat.junkAppJS">
       <parameters>
         <parameter value="-scalajs" />

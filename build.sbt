@@ -66,6 +66,17 @@ lazy val chatApp =
       )
     )
 
+lazy val filesync = (project in file("filesync"))
+  .settings(
+    name := "filesync",
+    libraryDependencies ++= Seq(
+      "com.lihaoyi" %% "requests"  % "0.9.0",
+      "com.lihaoyi" %% "castor"       % "0.3.0",
+      "com.lihaoyi" %% "os-lib"    % "0.11.5",
+      "com.lihaoyi" %% "os-lib-watch" % "0.11.5",
+      "com.lihaoyi" %% "upickle"   % "4.3.0",
+    )
+  )
 
 lazy val root = (project in file("."))
   .settings(
