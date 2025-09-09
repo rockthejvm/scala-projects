@@ -2,7 +2,7 @@ package com.rockthejvm.filesync
 
 import java.io.{DataInputStream, DataOutputStream}
 
-object Agent {
+object LocalAgent {
   // performs actions on the dest dir
   // cwd = dest dir
 
