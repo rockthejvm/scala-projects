@@ -12,8 +12,6 @@ case class Delete(path: os.SubPath) extends Rpc derives ReadWriter
 case class AgentReport(path: os.SubPath, fileHash: Option[Int]) extends Rpc derives ReadWriter
 case class RequestReport(path: os.SubPath) extends Rpc derives ReadWriter
 
-// TODO - add all commands to send to the agent: create folder, overwrite, ...
-
 object Protocol {
   given ReadWriter[os.SubPath] =
     readwriter[String].bimap[os.SubPath](

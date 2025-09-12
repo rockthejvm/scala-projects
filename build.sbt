@@ -78,6 +78,32 @@ lazy val filesync = (project in file("filesync"))
     )
   )
 
+lazy val ragnarok = (crossProject(JSPlatform, JVMPlatform) in file("ragnarok"))
+  .jsSettings(
+    name := "frontend",
+    Compile / fastOptJS / artifactPath := baseDirectory.value / "static/main.js",
+    scalaJSUseMainModuleInitializer    := true,
+    libraryDependencies ++= Seq(
+      "org.scala-js"  %%% "scalajs-dom" % "2.8.0",
+      "com.lihaoyi" %%% "scalatags"   % "0.13.1",
+      "com.lihaoyi" %%% "upickle"   % "4.3.0",
+    )
+  )
+  .jvmSettings(
+    name := "backend",
+    libraryDependencies ++= Seq(
+      "com.lihaoyi" %% "cask"      % "0.10.2",
+      "com.lihaoyi" %% "upickle"   % "4.3.0",
+      "com.lihaoyi" %% "os-lib"    % "0.11.5",
+      "ch.qos.logback" % "logback-classic" % "1.5.18",
+      "dev.langchain4j" % "langchain4j"          % "1.4.0",
+      "dev.langchain4j" % "langchain4j-open-ai"  % "1.4.0",
+      "dev.langchain4j" % "langchain4j-agentic" % "1.4.0-beta10",
+      "dev.langchain4j" % "langchain4j-embeddings" % "1.4.0-beta10",
+      "dev.langchain4j" % "langchain4j-easy-rag" % "1.4.0-beta10"
+    )
+  )
+
 lazy val root = (project in file("."))
   .settings(
     name := "scala-projects"

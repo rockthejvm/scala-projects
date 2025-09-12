@@ -15,6 +15,9 @@
             <option value="$PROJECT_DIR$/filesync" />
             <option value="$PROJECT_DIR$/photoscala" />
             <option value="$PROJECT_DIR$/project" />
+            <option value="$PROJECT_DIR$/ragnarok/js" />
+            <option value="$PROJECT_DIR$/ragnarok/jvm" />
+            <option value="$PROJECT_DIR$/ragnarok/shared" />
             <option value="$PROJECT_DIR$/scrapeyard" />
             <option value="$PROJECT_DIR$/staticsite" />
           </set>

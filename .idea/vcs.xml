@@ -2,7 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/filesync/src/main/resources/indir/subdir/typelevel-rite-of-passage" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/filesync/src/main/resources/outdir/subdir/typelevel-rite-of-passage" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ragnarok/jvm/src/main/resources/blog/rockthejvm-site" vcs="Git" />
   </component>
 </project>

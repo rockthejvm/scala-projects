@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock the JVM AI</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/lib/marked.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/scala.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/kotlin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.4/dist/purify.min.js"></script>
+  <link rel="stylesheet" href="./main.css" /><link>
+</head>
+<body>
+<div class="app">
+  <div class="hero-container">
+    <div class="explainer">
+      <h1>Rock the JVM AI</h1>
+      <div>
+        <p>This is a chat app based on Rock the JVM materials.</p>
+        <p>Ask it a question, and you'll get answers and examples from the materials, usually with references.</p>
+        <p>Currently trained on the <a href="https://rockthejvm.com/articles">blog</a> containing ~10 books' worth of content, with courses (400 hours and 50k LOC) coming soon.</p>
+        <p>Currently programmed to reset chat memory after 10 minutes since the last message.</p>
+        <p>Open to feedback! Share <a href="mailto:daniel@rockthejvm.com">here.</a></p>
+      </div>
+    </div>
+  </div>
+  <div id="chat-container" class="chat-container">
+    <div class="chat-header">
+      <h3>Rock the JVM AI</h3>
+    </div>
+    <div id="messages" class="messages"></div>
+    <div id="input-container" class="input-container">
+      <input type="text" id="question" class="question" placeholder="Ask a question...">
+      <button id="send-button" class="send-button">Send</button>
+    </div>
+    <div class="spin-container" id="spin-container">
+      <div id="spinner" class="spinner"></div>
+    </div>
+  </div>
+</div>
+<script src="./main.js"></script>
+</body>
+</html>
