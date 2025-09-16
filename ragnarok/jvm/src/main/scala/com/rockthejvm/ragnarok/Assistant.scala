@@ -22,7 +22,7 @@ trait Assistant {
   def reply(@UserMessage question: String): TokenStream
 }
 
-object Assistant {
+object RAGEngine {
   val apiKey = sys.env.getOrElse("OPENAI_API_KEY", "REPLACE_ME")
   val contentPath = os.Path("/Users/daniel/dev/rockthejvm/courses/scala-projects/ragnarok/jvm/src/main/resources/blog")
   val model = "gpt-4o"

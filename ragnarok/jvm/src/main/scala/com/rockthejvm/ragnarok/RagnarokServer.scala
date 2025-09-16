@@ -13,7 +13,7 @@ object RagnarokServer extends MainRoutes {
   private val assistants = new ConcurrentHashMap[String, Assistant]()
 
 //  private val assistant = Assistant()
-  
+
 
   // get /session -> UUID
   @get("/session")
@@ -27,8 +27,8 @@ object RagnarokServer extends MainRoutes {
       // remember the websocket for this session
       wsConnections.put(sessionId, connection)
       println(s"building assistant for $sessionId")
-      assistants.put(sessionId, Assistant())
-      println(s"getting assistant for $sessionId: ${assistants.get(sessionId)}")
+      assistants.put(sessionId, RAGEngine())
+      println(s"got assistant for $sessionId: ${assistants.get(sessionId)}")
 
       WsActor {
         case Ws.Close(_, _) =>
@@ -44,7 +44,7 @@ object RagnarokServer extends MainRoutes {
       // happy path
       val assistant = assistants.get(sessionId)
       println(s"getting assistant for $sessionId: $assistant")
-      val relevantArticles = Assistant.getReferences(content) // list of articles
+      val relevantArticles = RAGEngine.getReferences(content) // list of articles
 
       assistant.reply(content)
         .onPartialResponse { token =>
@@ -75,6 +75,6 @@ object RagnarokServer extends MainRoutes {
   def serveStatic() =
     "/Users/daniel/dev/rockthejvm/courses/scala-projects/ragnarok/js/static"
 
-  Assistant.startIngestion()
+  RAGEngine.startIngestion()
   initialize()
 }
